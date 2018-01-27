@@ -1,0 +1,28 @@
+- Introduction
+- Let's go back to 2012
+- Best library - jQuery
+- Now, the times have changed
+- Web development is not only displaying lists of content on a page
+- It can be so much more
+- Now it's 2018
+- Best library...
+- jQuery babyyy
+- React - quick introduction
+- React has had the most growth by far
+- It's flexible
+- Custom renderers (list)
+- Most notably - ReactVR and ReactAR
+- Why do we want those on the web?
+- Because we can, it's fun to explore other possibilities
+- Web is accessible, no expensive equipment required
+- Let's start with VR
+- The concept is nothing new
+- Virtual Boy
+- Are we ready now?
+- ¯\_(ツ)_/¯
+- Are we ready *now*?
+- Absolutely!
+- What is ReactVR?
+- A FRAMEWORK FOR BUILDING VR APPS USING REACT
+
+https://poly.google.com/
