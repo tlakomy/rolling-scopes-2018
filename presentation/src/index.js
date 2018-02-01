@@ -2,6 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Presentation from './presentation';
 import registerServiceWorker from './registerServiceWorker';
+import styled from 'styled-components';
 
-ReactDOM.render(<Presentation />, document.getElementById('root'));
+const Signature = styled.span`
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+`;
+
+ReactDOM.render(<div><Presentation /><Signature>🐦 @tlakomy</Signature></div>, document.getElementById('root'));
 registerServiceWorker();
