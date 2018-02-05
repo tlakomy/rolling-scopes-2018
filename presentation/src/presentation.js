@@ -76,6 +76,10 @@ const images = {
   hellovr: require("./assets/hellovr.png"),
   hololens: require("./assets/hololens.jpg"),
   expensive: require("./assets/expensive.png"),
+  axis: require("./assets/axis.png"),
+  hololens_video: require('./assets/hololens.mp4'),
+  vr_beka: require("./assets/vr_beka.jpg"),
+  past: require("./assets/past.jpg")
 };
 
 export default class Presentation extends React.Component {
@@ -83,7 +87,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck
         transition={['fade']}
-        progress="bar"
+        progress="none"
         transitionDuration={500}
         theme={theme}
       >
@@ -96,10 +100,10 @@ export default class Presentation extends React.Component {
           </Text>
           <Image fit src={images.egnyteLogo.replace("/", "")} height="150px" margin={0}/>
         </Slide>
-        <Slide><Heading fit textColor="secondary">Let's go back to 2012</Heading></Slide>
+        <Slide bgImage={images.past.replace("/", "")}><Heading fit bgColor="black" textColor="secondary">Let's go back to the past</Heading></Slide>
         <Slide>
           <Heading size={2} fit textColor="secondary" textFont="primary">
-            What was it like back then?
+            What was the web like in 2012?
           </Heading>
           <List>
             <Appear><ListItem>IE8 😤</ListItem></Appear>
@@ -255,10 +259,14 @@ export default App;
             />
         </Slide>
         <Slide><Heading fit textColor="secondary">Let's go further</Heading></Slide>
-        <Magic>
-          <Slide><Heading textColor="secondary">Change the reality</Heading></Slide>
-          <Slide><Heading textColor="secondary">Virtual Reality</Heading></Slide>
-        </Magic>
+        <Slide>
+          <Appear fid="1">
+            <Heading size={2} caps fit textColor="white">
+              Virtual Reality
+            </Heading>
+          </Appear>
+          <Image fit src={images.vr_beka.replace("/", "")} height="500" margin={0}/>
+        </Slide>
         <Slide bgColor="black">
           <Heading size={2} fit textColor="secondary" textFont="primary">
             It's been around for quite some time
@@ -283,7 +291,11 @@ export default App;
           </Appear>
         </Slide>
         <Slide><Heading textColor="secondary">23 years later</Heading></Slide>
-        <Slide><Heading textColor="secondary">Virtual reality with React</Heading></Slide>
+        <Magic>
+          <Slide><Heading size={3} textColor="secondary">Virtual Reality</Heading></Slide>
+          <Slide><Heading size={3} textColor="secondary">Virtual Reality on Web</Heading></Slide>
+          <Slide><Heading size={3} textColor="secondary">Virtual Reality with React</Heading></Slide>
+        </Magic>
         <Slide>
           <Heading size={2} fit>
             What is ReactVR?
@@ -436,10 +448,11 @@ export default App;
             />
         </Slide>
         <Slide>
-          <Heading size={2} caps fit>
+          <Heading size={2} fit>
             Positioning items in 3D space
           </Heading>
         </Slide>
+        <Slide bgImage={images.axis.replace("/", "")}></Slide>
         <Slide bgColor="black" textColor="secondary">
           <Heading size={2} fit textColor="secondary" textFont="primary">
             Units and transforms
@@ -512,6 +525,9 @@ export default App;
           <Slide><Heading textColor="secondary">React VR</Heading></Slide>
           <Slide><Heading textColor="secondary">React VAR</Heading></Slide>
         </Magic>
+        <Slide>
+          <video autoplay="true" src={images.hololens_video.replace("/", "")} style={{height: '90vh'}}></video>
+        </Slide>
         <Slide>
           <Heading size={2} caps fit textFont="primary">
             The Web offers us unlimited possibilities 🌐
