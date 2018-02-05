@@ -7,7 +7,7 @@ import styled from 'styled-components';
 const Signature = styled.span`
   position: fixed;
   bottom: 20px;
-  right: 0;
+  right: 12px;
 `;
 
 ReactDOM.render(<div><Presentation /><Signature>🐦 @tlakomy</Signature></div>, document.getElementById('root'));

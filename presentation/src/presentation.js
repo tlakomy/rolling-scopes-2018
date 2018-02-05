@@ -92,7 +92,7 @@ export default class Presentation extends React.Component {
             Journey through VR and AR with React
           </Heading>
           <Text fontSize={5} textColor="tertiary" margin="50px 0 0 0">
-             Tomasz Łakomy (@tlakomy)
+             Tomasz Łakomy
           </Text>
           <Image fit src={images.egnyteLogo.replace("/", "")} height="150px" margin={0}/>
         </Slide>
