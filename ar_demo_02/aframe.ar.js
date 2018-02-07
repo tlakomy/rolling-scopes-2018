@@ -1547,6 +1547,7 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 		} else if (url.indexOf("\n") > -1) { // Or a string with the camera param
 			writeStringToFS(filename, url, writeCallback);
 		} else {
+			url = "./camera_para.dat";
 			ajax(url, filename, writeCallback);
 		}
 	}

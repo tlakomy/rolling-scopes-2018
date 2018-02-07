@@ -1459,6 +1459,7 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 	var marker_count = 0;
 	function addMarker(arId, url, callback) {
 		var filename = '/marker_' + marker_count++;
+		url = "./pattern-hiro.patt";
 		ajax(url, filename, function() {
 			var id = Module._addMarker(arId, filename);
 			if (callback) callback(id);
@@ -1547,6 +1548,7 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 		} else if (url.indexOf("\n") > -1) { // Or a string with the camera param
 			writeStringToFS(filename, url, writeCallback);
 		} else {
+			url = "./camera_para.dat";
 			ajax(url, filename, writeCallback);
 		}
 	}

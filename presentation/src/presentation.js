@@ -69,6 +69,7 @@ const images = {
   less: require("./assets/less-logo.png"),
   hiro: require("./assets/hiro.png"),
   arjs: require("./assets/arjs.jpg"),
+  elon: require("./assets/elon.jpg"),
   reactar: require("./assets/reactar.png"),
   custom_marker: require("./assets/custom_marker.png"),
   mario: require("./assets/mario.gif"),
@@ -87,7 +88,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck
         transition={['fade']}
-        progress="none"
+        progress="bar"
         transitionDuration={500}
         theme={theme}
       >
@@ -103,7 +104,7 @@ export default class Presentation extends React.Component {
         <Slide bgImage={images.past.replace("/", "")}><Heading fit bgColor="black" textColor="secondary">Let's go back to the past</Heading></Slide>
         <Slide>
           <Heading size={2} fit textColor="secondary" textFont="primary">
-            What was the web like in 2012?
+            What was the web like 5 years ago?
           </Heading>
           <List>
             <Appear><ListItem>IE8 😤</ListItem></Appear>
@@ -137,6 +138,7 @@ export default class Presentation extends React.Component {
         <Slide><Heading fit textColor="secondary">It's fun to explore 🎉</Heading></Slide>
         <Slide><Heading fit textColor="secondary">Now, we are living in the future 📅</Heading></Slide>
         <Slide><Heading fit textColor="secondary">Future is weird</Heading></Slide>
+        <Slide bgImage={images.elon.replace("/", "")}></Slide>
         <Slide><Image fit src={images.uber.replace("/", "")} height="600" margin={0}/></Slide>
         <Slide bgImage={images.tv.replace("/", "")}></Slide>
         <Slide bgImage={images.gearvr.replace("/", "")}></Slide>
@@ -144,10 +146,6 @@ export default class Presentation extends React.Component {
         <Slide><Heading fit textColor="secondary">In 2018, we can do more</Heading></Slide>
         <Slide><Heading fit textColor="secondary">React</Heading></Slide>
         <Slide><Heading fit textColor="secondary">A JavaScript library for building user interfaces</Heading></Slide>
-        <Slide>
-          <Image fit src={images.frameworks.replace("/", "")} height="550" margin={0}/>
-          <Cite textColor="secondary">Source: http://www.timqian.com/star-history/#facebook/react&jquery/jquery&angular/angular&vuejs/vue</Cite>
-        </Slide>
         <Slide><Heading fit textColor="secondary">Flexibility</Heading></Slide>
         <Slide>
           <Image fit src={images.renderers.replace("/", "")} height="600" margin={0}/>
@@ -193,8 +191,6 @@ export default class Presentation extends React.Component {
           <Image fit src={images.reactar.replace("/", "")} height="600" margin={0}/>
           <Cite>Source: Nitin Tulswani https://github.com/nitin42/React-Web-AR</Cite>
         </Slide>
-        <Slide><Heading fit textColor="secondary">Experimental and work in progress 🚧</Heading></Slide>
-        <Slide bgImage={images.yolo.replace("/", "")}></Slide>
         <Slide>
           <Heading size={2} fit textColor="secondary" textFont="primary">
             Standing on the shoulders of giants
@@ -242,6 +238,8 @@ export default App;
 `}
           />
         </Slide>
+        <Slide><Heading fit textColor="secondary">Experimental and work in progress 🚧</Heading></Slide>
+        <Slide bgImage={images.yolo.replace("/", "")}></Slide>
         <Slide><Heading fit textColor="secondary">Custom markers</Heading></Slide>
         <Slide bgImage={images.custom_marker.replace("/", "")}></Slide>
         <Slide>
@@ -273,23 +271,7 @@ export default App;
           </Heading>
         </Slide>
         <Slide bgImage={images.virtualboy.replace("/", "")}></Slide>
-        <Slide bgImage={images.mario.replace("/", "")}>
-          <Appear fid="1">
-            <Heading size={2} caps fit textColor="white">
-              Available only in 🇯🇵 and 🇺🇸
-            </Heading>
-          </Appear>
-          <Appear fid="2">
-            <Heading size={2} caps fit textColor="white" margin="20px 0">
-              Released in July 1995
-            </Heading>
-          </Appear>
-          <Appear fid="3">
-            <Heading size={2} caps fit textColor="white" margin="20px 0">
-              Discontinued in December 1995
-            </Heading>
-          </Appear>
-        </Slide>
+        <Slide bgImage={images.mario.replace("/", "")}></Slide>
         <Slide><Heading textColor="secondary">23 years later</Heading></Slide>
         <Magic>
           <Slide><Heading size={3} textColor="secondary">Virtual Reality</Heading></Slide>
@@ -333,90 +315,6 @@ export default App;
             </Code>  
           </Layout>
         </Slide>
-        <Slide bgColor="black">
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px">
-              · node_modules
-            </Code>
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px"> 
-              · package.json
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px">
-              · static_assets/
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 60px">
-                · chess-world.jpg
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px"> 
-              · vr/
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 60px">
-                · client.js
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 60px">
-                · index.html
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px">
-              · index.vr.js
-            </Code>  
-          </Layout>
-        </Slide>
-        <Slide bgColor="black">
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 20px">
-              · node_modules
-            </Code>
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 20px"> 
-              · package.json
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 20px">
-              · static_assets/
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 60px">
-                · chess-world.jpg
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 20px"> 
-              · vr/
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 60px">
-                · client.js
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="gray" margin="0 0 0 60px">
-                · index.html
-            </Code>  
-          </Layout>
-          <Layout>
-            <Code size={2} fit textColor="secondary" margin="0 0 0 20px">
-              · index.vr.js
-            </Code>  
-          </Layout>
-        </Slide>
         <Slide bgImage={images.hellovr.replace("/", "")}></Slide>
          <Slide>
           <CodePane
@@ -455,18 +353,13 @@ export default App;
         <Slide bgImage={images.axis.replace("/", "")}></Slide>
         <Slide bgColor="black" textColor="secondary">
           <Heading size={2} fit textColor="secondary" textFont="primary">
-            Units and transforms
+            Transform properties
           </Heading>
           <List>
-            <Appear><ListItem>Distance and dimensional units are in meters</ListItem></Appear>
-            <Appear><ListItem>Rotation units are in degrees</ListItem></Appear>
-            <Appear><ListItem>Transform properties:</ListItem></Appear>
-            <Appear><List>
-              <ListItem>Scale</ListItem>
-              <Appear><ListItem>Rotate</ListItem></Appear>
-              <Appear><ListItem>Translate</ListItem></Appear>
-              <Appear><ListItem>Matrix</ListItem></Appear>
-            </List></Appear>
+            <Appear><ListItem>Scale</ListItem></Appear>
+            <Appear><ListItem>Rotate</ListItem></Appear>
+            <Appear><ListItem>Translate</ListItem></Appear>
+            <Appear><ListItem>Matrix</ListItem></Appear>
           </List>
         </Slide>
         <Slide bgColor="black">
@@ -519,12 +412,6 @@ export default App;
         <Slide>
           <Image fit src={images.expensive.replace("/", "")} height="500" margin={0}/>
         </Slide>
-        <Magic>
-          <Slide><Heading textColor="secondary">React</Heading></Slide>
-          <Slide><Heading textColor="secondary">React AR</Heading></Slide>
-          <Slide><Heading textColor="secondary">React VR</Heading></Slide>
-          <Slide><Heading textColor="secondary">React VAR</Heading></Slide>
-        </Magic>
         <Slide>
           <video autoplay="true" src={images.hololens_video.replace("/", "")} style={{height: '90vh'}}></video>
         </Slide>
